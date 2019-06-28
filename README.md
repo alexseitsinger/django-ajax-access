@@ -1,4 +1,4 @@
-# Python Package
+# Django Ajax Access
 
 ## Description
 
