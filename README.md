@@ -22,12 +22,16 @@ settings.py
 
 ```python
 AJAX_ACCESS = {
-	"LOGIN_RATELIMIT_KEY": "ip",
-	"LOGIN_RATELIMIT_RATE": "10/h",
-	"LOGIN_RATELIMIT_BLOCK": True,
-	"LOGOUT_RATELIMIT_KEY": "ip",
-	"LOGOUT_RATELIMIT_RATE": "10/h",
-	"LOGOUT_RATELIMIT_BLOCK": True,
+  "LOGIN_RATELIMIT": {
+    "KEY": "ip",
+    "RATE": "10/h",
+    "BLOCK": True,
+  },
+  "LOGOUT_RATELIMIT": {
+    "KEY": "ip",
+    "RATE": "10/h",
+    "BLOCK": True,
+  },
 }
 ```
 
@@ -37,8 +41,8 @@ urls.py
 from django.conf.urls import url, include
 
 urlpatterns = [
-	...
-	url("^access/", include("ajax_access.urls")),
-	...
+  ...
+  url("^access/", include("ajax_access.urls")),
+  ...
 ]
 ```
