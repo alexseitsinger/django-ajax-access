@@ -7,13 +7,7 @@ A set of views and urls for ajax-based logout and logout for Django.
 ## Installation
 
 ```
-pip install django_ajax_access
-```
-
-or
-
-```
-pipenv install django_ajax_access
+pip install django-ajax-access
 ```
 
 ## Usage
